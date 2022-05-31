@@ -19,6 +19,16 @@
       "price": 1500,
       "trackingStatus": "Completed",
       "id": 2
+    },
+    {
+      "trackingNumber": "cc-0002",
+      "receiver": "Sira",
+      "pickupDate": "2022-05-25T17:00:00.000Z",
+      "address": "Ratchaburi",
+      "paymentType": "COD",
+      "price": 1500,
+      "trackingStatus": "Picked up",
+      "id": 3
     }
   ]
 }

@@ -18,4 +18,8 @@ export class BackendService {
     return this.http.get<any>('http://localhost:3000/order')
   }
 
+  putOrder(data: any, id: number) {
+    return this.http.put<any>(`http://localhost:3000/order/${id}`, data)
+  }
+
 }
