@@ -73,6 +73,18 @@ export class AppComponent {
       data: row
     })
   }
+  
+  deleteOrder(id: any) {
+    this.backendService.deleteOrder(id)
+      .subscribe({
+        next: () => {
+          alert('Order deleted successfully')
+        },
+        error: () => {
+          alert('Error while deleting order')
+        }
+      })
+  }
 
 }
 
