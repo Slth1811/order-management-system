@@ -1,1 +1,54 @@
-<p>order-dialog works!</p>
+<h1 mat-dialog-title>Add Order Form</h1>
+
+<div mat-dialog-content>
+
+    <form [formGroup]="orderForm">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Tracking Number</mat-label>
+            <input formControlName="trackingNumber" matInput placeholder="ex. cc-001" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Pick up date</mat-label>
+            <input formControlName="pickupDate" matInput [matDatepicker]="picker" placeholder="ex. 31/5/2022" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Receiver</mat-label>
+            <input formControlName="receiver" matInput placeholder="ex. Capmu" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input formControlName="address" matInput placeholder="ex. Bangkok" />
+        </mat-form-field>
+
+        <h3>Payment Type</h3>
+        <mat-radio-group formControlName="paymentType" class="example-radio-group">
+            <mat-radio-button style="padding-right: 15px" value="COD">COD</mat-radio-button>
+            <mat-radio-button style="padding-right: 15px" value="TRANSFER">Transfer</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Price</mat-label>
+            <input formControlName="price" matInput type="number" placeholder="ex. 1500" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Tracking Status</mat-label>
+            <mat-select formControlName="trackingStatus">
+                <mat-option *ngFor="let status of trackingStatus" [value]="status">
+                    {{ status }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+    <button mat-stroked-button color="primary" mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" (click)="createOrder()">Save</button>
+</div>

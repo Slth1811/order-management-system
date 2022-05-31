@@ -1,0 +1,24 @@
+{
+  "order": [
+    {
+      "trackingNumber": "cc-0001",
+      "receiver": "Waen",
+      "pickupDate": "2022-05-28T17:00:00.000Z",
+      "address": "Chonburi",
+      "paymentType": "TRANSFER",
+      "price": 200,
+      "trackingStatus": "On delivery",
+      "id": 1
+    },
+    {
+      "trackingNumber": "cc-0002",
+      "receiver": "Hzn",
+      "pickupDate": "2022-05-25T17:00:00.000Z",
+      "address": "Ratchaburi",
+      "paymentType": "COD",
+      "price": 1500,
+      "trackingStatus": "Completed",
+      "id": 2
+    }
+  ]
+}
